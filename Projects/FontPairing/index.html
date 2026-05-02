@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Pairing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+
+    <div class="container">
+      <header class="topbar">
+        <div class="brand">
+          <small>Workflow Tipográfico Premium</small>
+          <h1>Font Pairing</h1>
+          <p>
+            Combinações tipográficas para interfaces elegantes.
+          </p>
+        </div>
+
+        <div class="toolbar">
+          <button class="btn btn-secondary" id="prevBtn" type="button">← Voltar</button>
+          <button class="btn btn-secondary" id="shuffleBtn" type="button">Gerar</button>
+          <button class="btn btn-secondary" id="nextBtn" type="button">Avançar →</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <!-- Coluna esquerda: preview e comparação -->
+        <section class="panel left-panel">
+          <p class="section-title">Live Preview</p>
+
+          <div class="preview-shell">
+            <div class="preview-stage">
+              <div class="landing-preview preview-hero-only">
+                <div class="landing-scroll" id="landingScroll">
+                  <div class="site-nav">
+                    <div class="site-brand preview-heading-target" id="navLogo">AUREUM STUDIO</div>
+                    <div class="site-links preview-body-target">
+                      <span>Início</span>
+                      <span>Sobre</span>
+                      <span>Projetos</span>
+                    </div>
+                  </div>
+
+                  <section class="full-section" data-anchor="hero">
+                    <div class="section-inner hero-layout">
+                      <div>
+                        <p class="eyebrow preview-body-target" id="previewEyebrow">
+                          Direção Digital de Luxo
+                        </p>
+                        <h2 class="display preview-heading-target" id="previewTitle">
+                          Criando presença digital atemporal para marcas refinadas.
+                        </h2>
+                        <h3 class="sub preview-body-target" id="previewSubtitle">
+                          Uma combinação tipográfica curada para elevar landing pages,
+                          interfaces premium e narrativas editoriais.
+                        </h3>
+                        <p class="body preview-body-target" id="previewBody">
+                          Use esta ferramenta para testar combinações elegantes entre
+                          fontes de títulos e de corpo, visualizar seu comportamento em
+                          landing pages completas e aplicar um sistema tipográfico
+                          consistente no seu próximo projeto.
+                        </p>
+
+                        <div class="cta-row">
+                          <button class="btn btn-primary preview-body-target" id="primaryButton" type="button">
+                            Iniciar Projeto
+                          </button>
+                          <button class="ghost-btn preview-body-target" id="secondaryButton" type="button">
+                            Ver Estudo de Caso
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <section class="group">
+              <div class="group-header">
+                <p class="tiny-title">Modo de comparação PRO</p>
+                <div class="small-note">
+                  Comparação lado a lado sincronizada com destaque das diferenças.
+                </div>
+              </div>
+
+              <div class="compare-toolbar">
+                <button class="chip active" id="toggleDiffsBtn" type="button">Destaque ativo</button>
+                <button class="chip" id="swapCompareBtn" type="button">Trocar alternativa</button>
+              </div>
+
+              <div class="compare-mode">
+                <div class="compare-panel">
+                  <div class="compare-panel-header">
+                    <strong id="compareCurrentLabel">Atual</strong>
+                    <span class="small-note" id="compareCurrentFonts">Georgia + Arial</span>
+                  </div>
+                  <div class="compare-scroll" id="compareScrollA">
+                    <div class="compare-page" id="comparePageA"></div>
+                  </div>
+                </div>
+
+                <div class="compare-panel">
+                  <div class="compare-panel-header">
+                    <strong id="compareAltLabel">Alternativa</strong>
+                    <span class="small-note" id="compareAltFonts">Palatino + Tahoma</span>
+                  </div>
+                  <div class="compare-scroll" id="compareScrollB">
+                    <div class="compare-page" id="comparePageB"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="diff-list" id="diffList"></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- Coluna direita: controles -->
+        <aside class="panel right-panel">
+          <div class="stack">
+            <section class="group">
+              <div class="group-header">
+                <p class="tiny-title">Detalhes da combinação</p>
+                <div class="small-note" id="pairingCounter">01 / 24</div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <span>Título font</span>
+                  <strong id="headingFontName">Georgia</strong>
+                </div>
+                <div class="meta-box">
+                  <span>Texto font</span>
+                  <strong id="bodyFontName">Arial</strong>
+                </div>
+              </div>
+
+              <div class="badge-row" id="styleBadges"></div>
+            </section>
+
+            <section class="group">
+              <div class="group-header">
+                <p class="tiny-title">Curadoria manual</p>
+                <div class="small-note">Identidade de marca dentro da ferramenta.</div>
+              </div>
+
+              <div class="featured-tags">
+                <button class="chip active" data-curation="all" type="button">Todos</button>
+                <button class="chip" data-curation="featured" type="button">Combinações em destaque</button>
+                <button class="chip" data-curation="editor" type="button">Escolha do editor</button>
+                <button class="chip" data-curation="luxury" type="button">Seleção luxury</button>
+              </div>
+
+              <div class="featured-grid" id="featuredGrid"></div>
+            </section>
+
+            <section class="group">
+              <div class="group-header">
+                <p class="tiny-title">Biblioteca</p>
+                <button class="btn btn-soft" id="clearFiltersBtn" type="button">Limpar filtros</button>
+              </div>
+
+              <div class="pairings-toolbar" id="styleFilterBar"></div>
+              <input
+                class="search"
+                id="searchInput"
+                type="text"
+                placeholder="Buscar fonte, combinação ou estilo..."
+              />
+
+              <div class="library-scroll">
+                <div class="pairings-grid" id="pairingsGrid"></div>
+              </div>
+            </section>
+
+            <section class="group">
+              <div class="group-header">
+                <p class="tiny-title">Editor de conteúdo</p>
+                <div class="small-note">Edite o preview em tempo real.</div>
+              </div>
+
+              <div class="control-grid">
+                <div class="field">
+                  <label for="headingTextInput">Título</label>
+                  <input
+                    id="headingTextInput"
+                    type="text"
+                    value="Criando presença digital atemporal para marcas refinadas."
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="subheadingTextInput">Subtítulo</label>
+                  <input
+                    id="subheadingTextInput"
+                    type="text"
+                    value="Uma combinação tipográfica curada para elevar landing pages, interfaces premium e narrativas editoriais."
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="eyebrowTextInput">Sobretítulo</label>
+                  <input id="eyebrowTextInput" type="text" value="Direção Digital de Luxo" />
+                </div>
+
+                <div class="field">
+                  <label for="primaryButtonInput">Texto do botão principal</label>
+                  <input id="primaryButtonInput" type="text" value="Iniciar Projeto" />
+                </div>
+
+                <div class="field">
+                  <label for="secondaryButtonInput">Texto do botão secundário</label>
+                  <input id="secondaryButtonInput" type="text" value="Ver Estudo de Caso" />
+                </div>
+
+                <div class="field field-full">
+                  <label for="bodyTextInput">Texto</label>
+                  <textarea id="bodyTextInput">
+Use esta ferramenta para testar combinações elegantes entre fontes de títulos e de corpo, visualizar seu comportamento em landing pages completas e aplicar um sistema tipográfico consistente no seu próximo projeto.</textarea
+                  >
+                </div>
+              </div>
+            </section>
+
+            <section class="group">
+              <div class="group-header">
+                <p class="tiny-title">Controle fino de tipografia</p>
+                <div class="small-note">Ajustes para título e texto.</div>
+              </div>
+
+              <div class="control-grid">
+                <div class="range-wrap">
+                  <div class="range-top">
+                    <span>Título size</span>
+                    <strong class="range-value" id="headingSizeValue">76px</strong>
+                  </div>
+                  <input id="headingSize" type="range" min="36" max="110" value="76" />
+                </div>
+
+                <div class="range-wrap">
+                  <div class="range-top">
+                    <span>Texto size</span>
+                    <strong class="range-value" id="bodySizeValue">18px</strong>
+                  </div>
+                  <input id="bodySize" type="range" min="13" max="28" value="18" />
+                </div>
+
+                <div class="range-wrap">
+                  <div class="range-top">
+                    <span>Título line-height</span>
+                    <strong class="range-value" id="headingLineValue">0.95</strong>
+                  </div>
+                  <input id="headingLine" type="range" min="0.8" max="1.4" step="0.01" value="0.95" />
+                </div>
+
+                <div class="range-wrap">
+                  <div class="range-top">
+                    <span>Texto line-height</span>
+                    <strong class="range-value" id="bodyLineValue">1.85</strong>
+                  </div>
+                  <input id="bodyLine" type="range" min="1.2" max="2.3" step="0.01" value="1.85" />
+                </div>
+
+                <div class="range-wrap">
+                  <div class="range-top">
+                    <span>Título letter-spacing</span>
+                    <strong class="range-value" id="headingTrackValue">-0.05em</strong>
+                  </div>
+                  <input id="headingTrack" type="range" min="-0.12" max="0.08" step="0.005" value="-0.05" />
+                </div>
+
+                <div class="range-wrap">
+                  <div class="range-top">
+                    <span>Texto letter-spacing</span>
+                    <strong class="range-value" id="bodyTrackValue">0em</strong>
+                  </div>
+                  <input id="bodyTrack" type="range" min="-0.03" max="0.08" step="0.005" value="0" />
+                </div>
+
+                <div class="range-wrap">
+                  <div class="range-top">
+                    <span>Título weight</span>
+                    <strong class="range-value" id="headingWeightValue">700</strong>
+                  </div>
+                  <input id="headingWeight" type="range" min="400" max="900" step="100" value="700" />
+                </div>
+
+                <div class="range-wrap">
+                  <div class="range-top">
+                    <span>Texto weight</span>
+                    <strong class="range-value" id="bodyWeightValue">400</strong>
+                  </div>
+                  <input id="bodyWeight" type="range" min="300" max="700" step="100" value="400" />
+                </div>
+              </div>
+            </section>
+
+            <section class="group">
+              <div class="group-header">
+                <p class="tiny-title">Pontuação da combinação</p>
+                <div class="small-note">Leitura visual da combinação atual.</div>
+              </div>
+
+              <div class="score-grid">
+                <div class="score-card">
+                  <div class="score-name">
+                    <span>Contraste</span>
+                    <strong id="scoreContrastText">82</strong>
+                  </div>
+                  <div class="meter"><span id="scoreContrast"></span></div>
+                </div>
+
+                <div class="score-card">
+                  <div class="score-name">
+                    <span>Elegância</span>
+                    <strong id="scoreEleganceText">90</strong>
+                  </div>
+                  <div class="meter"><span id="scoreElegance"></span></div>
+                </div>
+
+                <div class="score-card">
+                  <div class="score-name">
+                    <span>Legibilidade</span>
+                    <strong id="scoreLegibilidadeText">88</strong>
+                  </div>
+                  <div class="meter"><span id="scoreLegibilidade"></span></div>
+                </div>
+
+                <div class="score-card">
+                  <div class="score-name">
+                    <span>Presença editorial</span>
+                    <strong id="scoreEditorialText">84</strong>
+                  </div>
+                  <div class="meter"><span id="scoreEditorial"></span></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="site-footer">
+        <p class="site-footer__text">
+          Designed by
+          <!-- Substitua o href abaixo pelo URL real do seu site -->
+          <a class="site-footer__link" href="https://gusthafversailles.com" target="_blank" rel="noopener noreferrer">
+            Gusthaf Versailles
+          </a>
+        </p>
+      </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
