@@ -24,7 +24,7 @@ const translations = {
       subtitle: 'DESENVOLVEDOR WEB DE LUXO',
     },
     about: {
-      heading: 'Eu crio experiências digitais moldadas por atmosfera, precisão e identidade.',
+      heading: 'Eu crio experiências digitais com intenção, precisão e identidade.',
       p1: 'Sou Gusthaf Versailles — um desenvolvedor web focado em criar ambientes digitais imersivos onde design, movimento e estrutura coexistem com intenção.',
       p2: 'Meu trabalho não é sobre excesso. É sobre presença, controle e um ritmo visual que faz uma marca parecer consolidada desde a primeira interação.',
       principles: 'Princípios',
@@ -98,7 +98,7 @@ const translations = {
         button: 'Ver case',
       },
       cta: {
-        title: 'Comissões selecionadas apenas.',
+        title: 'Onde ideias ganham forma.',
         copy: 'Se você quer uma presença digital com autoridade visual mais forte, é aqui que a conversa começa.',
         button: 'Iniciar projeto',
       },
@@ -125,7 +125,7 @@ const translations = {
       subtitle: 'LUXURY WEB DEVELOPER',
     },
     about: {
-      heading: 'I design digital experiences shaped by atmosphere, precision and identity.',
+      heading: 'I create digital experiences with intention, precision, and identity.',
       p1: 'I’m Gusthaf Versailles — a web developer focused on building immersive digital environments where design, motion and structure coexist with intention.',
       p2: 'My work is not about excess. It is about presence, control and a visual rhythm that makes a brand feel established from the first interaction.',
       principles: 'Principles',
@@ -199,7 +199,7 @@ const translations = {
         button: 'View Case',
       },
       cta: {
-        title: 'Selected commissions only.',
+        title: 'Where ideas take shape.',
         copy: 'If you want a digital presence with stronger visual authority, this is where the conversation begins.',
         button: 'Start a Project',
       },
