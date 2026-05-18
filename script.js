@@ -26,7 +26,8 @@ const translations = {
     about: {
       heading: 'Eu crio experiências digitais com intenção, precisão e identidade.',
       p1: 'Sou Gusthaf Versailles — um desenvolvedor web focado em criar ambientes digitais imersivos onde design, movimento e estrutura coexistem com intenção.',
-      p2: 'Meu trabalho não é sobre excesso. É sobre presença, controle e um ritmo visual que faz uma marca parecer consolidada desde a primeira interação. Além do desenvolvimento visual, cada projeto é construído com práticas modernas de segurança e estabilidade projetadas para evitar vulnerabilidades e garantir confiabilidade a longo prazo.',
+      p2: 'Meu trabalho não é sobre excesso. É sobre presença, controle e um ritmo visual que faz uma marca parecer consolidada desde a primeira interação.',
+      p2: 'Além do desenvolvimento visual, cada projeto é construído com práticas modernas de segurança e estabilidade projetadas para evitar vulnerabilidades e garantir confiabilidade a longo prazo.',
       principles: 'Princípios',
       value1: 'Precisão acima da velocidade',
       value2: 'Atmosfera acima do excesso',
