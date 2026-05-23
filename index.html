@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#070506" />
+    <meta
+      name="description"
+      content="Desenvolvedor web de luxo criando ambientes digitais imersivos com precisão, atmosfera e identidade."
+    />
+
+    <title>Gusthaf Versailles</title>
+
+    <!-- Fontes do projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500&display=swap"
+    />
+
+    <!-- Estilos principais -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navegação fixa -->
+    <header class="navbar">
+      <div class="nav-shell">
+        <ul class="nav-links">
+          <li><a href="#home" class="active"><span data-i18n="nav.home">INÍCIO</span></a></li>
+          <li><a href="#about"><span data-i18n="nav.about">SOBRE</span></a></li>
+          <li><a href="#services"><span data-i18n="nav.services">SERVIÇOS</span></a></li>
+          <li><a href="#works"><span data-i18n="nav.works">ÚLTIMOS TRABALHOS</span></a></li>
+        </ul>
+
+        <!-- Alternador de idioma -->
+        <button
+          id="langToggle"
+          class="lang-toggle"
+          type="button"
+          data-lang="pt"
+          aria-label="Alternar idioma"
+        >
+          <span class="lang-toggle__option lang-toggle__option--pt">PT</span>
+          <span class="lang-toggle__divider" aria-hidden="true"></span>
+          <span class="lang-toggle__option lang-toggle__option--en">EN</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero active" aria-label="Início">
+      <div class="hero-shell">
+        <div class="hero-content">
+          <h1 class="title">GUSTHAF VERSAILLES</h1>
+          <p class="subtitle" data-i18n="hero.subtitle">DESENVOLVEDOR WEB DE LUXO</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="about" class="about" aria-label="Sobre">
+      <div class="section-scroll">
+        <div class="section-frame">
+          <div class="section-reveal delay-1">
+            <h2 class="section-heading" data-i18n="about.heading">
+              Eu crio experiências digitais com intenção, precisão e identidade.
+            </h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-panel section-reveal delay-2">
+              <p class="about-copy">
+                <span data-i18n="about.p1">
+                  Sou Gusthaf Versailles — um desenvolvedor web focado em criar ambientes digitais
+                  imersivos onde design, movimento e estrutura coexistem com intenção.
+                </span>
+              </p>
+
+              <p class="about-copy">
+                <span data-i18n="about.p2">
+                  Meu trabalho não é sobre excesso. É sobre presença, controle e um ritmo visual
+                  que faz uma marca parecer consolidada desde a primeira interação.
+                </span>
+              </p>
+
+              <p class="about-copy">
+                <span data-i18n="about.security">
+                  Além do desenvolvimento visual, cada projeto é construído com práticas modernas de
+                  segurança e estabilidade projetadas para evitar vulnerabilidades e garantir
+                  confiabilidade a longo prazo.
+                </span>
+              </p>
+
+              <div class="about-signature">GUSTHAF VERSAILLES</div>
+            </div>
+
+            <div class="about-panel section-reveal delay-3">
+              <span class="section-kicker" data-i18n="about.principles">Princípios</span>
+
+              <div class="about-values">
+                <div class="value-item" data-i18n="about.value1">Precisão acima da velocidade</div>
+                <div class="value-item" data-i18n="about.value2">Atmosfera acima do excesso</div>
+                <div class="value-item" data-i18n="about.value3">Identidade acima de tendências</div>
+                <div class="value-item" data-i18n="about.value4">Atemporal acima do temporário</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="philosophy-block section-reveal delay-4">
+            <div class="philosophy-title" data-i18n="about.philosophyTitle">Filosofia</div>
+
+            <p class="philosophy-quote">
+              <span data-i18n="about.quote">Luxo não é decoração. É contenção, ritmo e clareza.</span>
+            </p>
+
+            <p class="philosophy-copy">
+              <span data-i18n="about.philosophyCopy">
+                Cada interface deve parecer intencional, composta e inconfundivelmente presente —
+                desenhada para prender atenção pela atmosfera, não pelo excesso.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra visual de scroll da seção -->
+      <div class="scroll-ui is-hidden" aria-hidden="true">
+        <div class="scroll-thumb"></div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="services" class="services" aria-label="Serviços">
+      <div class="section-scroll">
+        <div class="section-frame">
+          <div class="section-reveal delay-1">
+            <h2 class="section-heading" data-i18n="services.heading">
+              Um processo estruturado para construir presença digital.
+            </h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="services-stack">
+            <article class="service-card section-reveal delay-1">
+              <span class="process-index" data-i18n="services.card1.index">01 — Estratégia</span>
+              <h3 data-i18n="services.card1.title">Posicionando a presença</h3>
+              <div class="service-tags" data-i18n="services.card1.tags">
+                Contexto da marca • Clareza de público • Direção
+              </div>
+              <p class="service-main">
+                <span data-i18n="services.card1.main">
+                  Todo projeto começa entendendo como a marca deve ser percebida — não apenas como
+                  ela deve parecer.
+                </span>
+              </p>
+              <p class="service-sub">
+                <span data-i18n="services.card1.sub">
+                  Tom, referências e território visual são definidos antes da interface ganhar forma.
+                </span>
+              </p>
+            </article>
+
+            <article class="service-card section-reveal delay-2">
+              <span class="process-index" data-i18n="services.card2.index">
+                02 — Arquitetura de identidade
+              </span>
+              <h3 data-i18n="services.card2.title">Construindo o sistema visual</h3>
+              <div class="service-tags" data-i18n="services.card2.tags">
+                Tipografia • Ritmo de layout • Presença de marca
+              </div>
+              <p class="service-main">
+                <span data-i18n="services.card2.main">
+                  Eu traduzo a presença da marca em estrutura, composição e hierarquia para que a
+                  experiência pareça imediatamente distinta.
+                </span>
+              </p>
+              <p class="service-sub">
+                <span data-i18n="services.card2.sub">
+                  É aqui que a elegância se torna sistema — não ornamento.
+                </span>
+              </p>
+            </article>
+
+            <article class="service-card section-reveal delay-3">
+              <span class="process-index" data-i18n="services.card3.index">03 — Ambiente digital</span>
+              <h3 data-i18n="services.card3.title">Desenhando a interface</h3>
+              <div class="service-tags" data-i18n="services.card3.tags">
+                Web design • Desenvolvimento • Execução responsiva
+              </div>
+              <p class="service-main">
+                <span data-i18n="services.card3.main">
+                  As telas são moldadas com precisão e contenção, equilibrando clareza editorial com
+                  performance técnica.
+                </span>
+              </p>
+              <p class="service-sub">
+                <span data-i18n="services.card3.sub">
+                  O resultado é um ambiente digital que parece refinado em qualquer dispositivo.
+                </span>
+              </p>
+            </article>
+
+            <article class="service-card section-reveal delay-4">
+              <span class="process-index" data-i18n="services.card4.index">04 — Movimento &amp; presença</span>
+              <h3 data-i18n="services.card4.title">Refinando a percepção final</h3>
+              <div class="service-tags" data-i18n="services.card4.tags">
+                Microinterações • Movimento no scroll • UI cinematográfica
+              </div>
+              <p class="service-main">
+                <span data-i18n="services.card4.main">
+                  O movimento é usado com intenção para controlar o ritmo, guiar a atenção e elevar a
+                  atmosfera geral da marca.
+                </span>
+              </p>
+              <p class="service-sub">
+                <span data-i18n="services.card4.sub">
+                  Um design de interação sutil transforma navegação em presença.
+                </span>
+              </p>
+            </article>
+          </div>
+
+          <div class="scope-block section-reveal delay-4">
+            <div class="project-scope" data-i18n="services.scopeTitle">ESCOPO DE PROJETO</div>
+
+            <div class="scope-list">
+              <span data-i18n="services.scope1">Websites one page</span>
+              <span data-i18n="services.scope2">Landing pages</span>
+              <span data-i18n="services.scope3">Portfólios de marca</span>
+              <span data-i18n="services.scope4">Plataformas institucionais</span>
+              <span data-i18n="services.scope5">Experiências digitais completas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra visual de scroll da seção -->
+      <div class="scroll-ui is-hidden" aria-hidden="true">
+        <div class="scroll-thumb"></div>
+      </div>
+    </section>
+
+    <!-- Trabalhos -->
+    <section id="works" class="works" aria-label="Últimos trabalhos">
+      <div class="section-scroll">
+        <div class="section-frame">
+          <div class="section-reveal delay-1">
+            <h2 class="section-heading" data-i18n="works.heading">
+              Ambientes digitais recentes com uma cadência visual premium.
+            </h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="works-list">
+            <article class="work-card section-reveal delay-1">
+              <div class="work-media">
+                <img src="ProjectsPreview/project1.jpg" loading="lazy" decoding="async" alt="Preview do projeto Elegant Fonts" />
+              </div>
+
+              <div class="work-content">
+                <div class="work-eyebrow" data-i18n="works.card1.eyebrow">
+                  Plataforma de exploração tipográfica
+                </div>
+                <h3>Elegant Fonts</h3>
+                <p>
+                  <span data-i18n="works.card1.copy">
+                    Uma plataforma digital de ferramentas com foco em luxo, criada com presença
+                    editorial refinada, movimento contido e uma cadência visual clara para fazer a
+                    interface parecer premium de imediato.
+                  </span>
+                </p>
+                <div class="work-meta">
+                  <span data-i18n="works.card1.meta1">Ano — 2025</span>
+                  <span data-i18n="works.card1.meta2">Papel — Design / Desenvolvimento</span>
+                </div>
+                <div class="work-actions">
+                  <a
+                    class="work-btn"
+                    href="Projects/ElegantFonts/index.html"
+                    data-i18n="works.card1.button"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ver case
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card section-reveal delay-2">
+              <div class="work-media">
+                <img src="ProjectsPreview/project2.jpg" loading="lazy" decoding="async" alt="Preview do projeto Atelier Aureum" />
+              </div>
+
+              <div class="work-content">
+                <div class="work-eyebrow" data-i18n="works.card2.eyebrow">Conceito de site institucional</div>
+                <h3>Font Pairing</h3>
+                <p>
+                  <span data-i18n="works.card2.copy">
+                    Ferramenta interativa criada para analisar e comparar combinações tipográficas em contexto real de interface.
+                    Permite testar hierarquia, ritmo visual e legibilidade diretamente em layouts simulados.
+                  </span>
+                </p>
+                <div class="work-meta">
+                  <span data-i18n="works.card2.meta1">Ano — 2025</span>
+                  <span data-i18n="works.card2.meta2">Papel — Direção de arte / UI</span>
+                </div>
+                <div class="work-actions">
+                  <a class="work-btn" href="Projects/FontPairing/index.html" data-i18n="works.card2.button">Ver case</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card section-reveal delay-3">
+              <div class="work-media">
+                <img src="ProjectsPreview/project3.jpg" loading="lazy" decoding="async" alt="Preview do projeto Obsidian House" />
+              </div>
+
+              <div class="work-content">
+                <div class="work-eyebrow" data-i18n="works.card3.eyebrow">
+                  Página cinematográfica de alto padrão
+                </div>
+                <h3>Atelier Noir</h3>
+                <p>
+                  <span data-i18n="works.card3.copy">
+                    Um conceito focado em atmosfera, ritmo e profundidade emocional — usando movimento e ritmo visual para tornar a interação imersiva e memorável. 
+                  </span>
+                </p>
+                <div class="work-meta">
+                  <span data-i18n="works.card3.meta1">Ano — 2026</span>
+                  <span data-i18n="works.card3.meta2">Papel — UI Design / Front-End / Sistema de Movimento</span>
+                </div>
+                <div class="work-actions">
+                  <a class="work-btn" href="Projects/AtelierNoir/index.html" data-i18n="works.card3.button">Ver case</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="works-cta section-reveal delay-4">
+            <h4 data-i18n="works.cta.title">Onde ideias ganham forma.</h4>
+            <p>
+              <span data-i18n="works.cta.copy">
+                Se você quer uma presença digital com autoridade visual mais forte, é aqui que a
+                conversa começa.
+              </span>
+            </p>
+            <a
+              class="work-btn"
+              href="https://wa.me/5562992789896"
+              data-i18n="works.cta.button"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Iniciar projeto
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra visual de scroll da seção -->
+      <div class="scroll-ui is-hidden" aria-hidden="true">
+        <div class="scroll-thumb"></div>
+      </div>
+    </section>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+  </body>
+</html>
