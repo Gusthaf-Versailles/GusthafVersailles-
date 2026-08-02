@@ -584,7 +584,7 @@ section.active .delay-4 {
 }
 
 .section-heading {
-  color: #eadad0;
+  color: #F1E9DC;
   font-size: clamp(30px, 4vw, 64px);
   line-height: 1.15;
 }
